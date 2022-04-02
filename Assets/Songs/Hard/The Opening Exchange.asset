@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62ce7823dbcb8e46a747dbcba34d3d3, type: 3}
+  m_Name: The Opening Exchange
+  m_EditorClassIdentifier: 
+  trackNumber: 1
+  trackName: The Opening Exchange
+  trackDifficulty: 1
+  trackLength: 0
+  notes: 080000000a0000000c000000100000001200000014000000170000001a0000001d000000230000002500000027000000
+  keys: 010000000200000003000000040000000300000002000000010000000300000002000000020000000100000002000000
