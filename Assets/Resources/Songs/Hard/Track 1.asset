@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f62ce7823dbcb8e46a747dbcba34d3d3, type: 3}
-  m_Name: The Opening Exchange
+  m_Name: Track 1
   m_EditorClassIdentifier: 
   trackNumber: 1
   trackName: The Opening Exchange
   trackLength: 40
+  trackSpeed: 150
   notes: 080000000a0000000c000000100000001200000014000000170000001a0000001d000000230000002500000027000000
   keys: 010000000200000003000000040000000300000002000000010000000300000002000000020000000100000002000000
   attacks:

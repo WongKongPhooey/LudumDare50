@@ -4,21 +4,27 @@ using UnityEngine;
 
 public class SongTracker : MonoBehaviour
 {
+	int songNumber;
 	static string songName;
 	int songSpeed;
 	float songPoint;
 	public GameObject noteTile;
 	public GameObject noteReel;
+	public Vector3 reelStart;
 	public Transform noteTrack;
 	public Song currentSong;
 	
     void Start(){
 		//Buys some time before the track plays
-        songSpeed = 150;
+        songSpeed = 120;
+		
+		reelStart = noteReel.transform.position;
 		
 		//currentSong = (Song)Resources.Load("Songs/Easy/" + songName);
 		
 		if(currentSong != null){
+			songNumber = currentSong.trackNumber;
+			songSpeed = currentSong.trackSpeed;
 			spawnNotes(currentSong);
 		} else {
 			Debug.Log("No song loaded");
@@ -41,5 +47,14 @@ public class SongTracker : MonoBehaviour
 			noteInst.transform.SetParent(noteTrack, false);
 			noteIndex++;
 		}
+	}
+	
+	public void nextTrack(){
+		songNumber++;
+		currentSong = (Song)Resources.Load("Songs/Hard/Track " + songNumber);
+		Debug.Log("Searching in Songs/Hard/Track " + songNumber);
+		songSpeed = currentSong.trackSpeed;
+		spawnNotes(currentSong);
+		noteReel.transform.position = reelStart;
 	}
 }
