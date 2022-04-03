@@ -1,43 +1,37 @@
 fileFormatVersion: 2
-guid: 25305e5600c19134da97f4f829c591ae
+guid: ee55d6919a638774cb4318d8de9ac354
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6235730421177079478
-    second: FrogJump_0
+      213: -4750238423457415357
+    second: ShieldOn_0
   - first:
-      213: 5868500117497405063
-    second: FrogJump_1
+      213: -6036716879943572472
+    second: ShieldOn_1
   - first:
-      213: 7737377854318466894
-    second: FrogJump_2
+      213: -8975792911685051217
+    second: ShieldOn_2
   - first:
-      213: 2598099687944061726
-    second: FrogJump_3
+      213: 2741035015893132994
+    second: ShieldOn_3
   - first:
-      213: -7466216139759109706
-    second: FrogJump_4
+      213: -1760820298992993390
+    second: ShieldOn_4
   - first:
-      213: 6010686515258846645
-    second: FrogJump_5
+      213: 8523767188162320256
+    second: ShieldOn_5
   - first:
-      213: -5754481274437790474
-    second: FrogJump_6
+      213: -8219283489927890323
+    second: ShieldOn_6
   - first:
-      213: -967782339758023999
-    second: FrogJump_7
+      213: -4863686116774285915
+    second: ShieldOn_7
   - first:
-      213: -3054310718087545893
-    second: FrogJump_8
+      213: -1662371605763077364
+    second: ShieldOn_8
   - first:
-      213: -378323847623015837
-    second: FrogJump_9
-  - first:
-      213: -6189115747630955615
-    second: FrogJump_10
-  - first:
-      213: 4651460005977495991
-    second: FrogJump_11
+      213: -7916723312121527903
+    second: ShieldOn_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -68,7 +62,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -139,13 +133,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FrogJump_0
+      name: ShieldOn_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 18
-        width: 144
-        height: 174
+        x: 606
+        y: 0
+        width: 202
+        height: 172
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a49a4a2683c3679a0800000000000000
-      internalID: -6235730421177079478
+      spriteID: 34fb86b5253c31eb0800000000000000
+      internalID: -4750238423457415357
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FrogJump_1
+      name: ShieldOn_1
       rect:
         serializedVersion: 2
-        x: 144
-        y: 18
-        width: 144
-        height: 174
+        x: 808
+        y: 0
+        width: 202
+        height: 172
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +168,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78e55c3a3c9117150800000000000000
-      internalID: 5868500117497405063
+      spriteID: 804eb594bf5493ca0800000000000000
+      internalID: -6036716879943572472
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FrogJump_2
+      name: ShieldOn_2
       rect:
         serializedVersion: 2
-        x: 288
-        y: 18
-        width: 144
-        height: 174
+        x: 1010
+        y: 0
+        width: 202
+        height: 172
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +189,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4750a30a20b06b60800000000000000
-      internalID: 7737377854318466894
+      spriteID: fac1b8117e39f6380800000000000000
+      internalID: -8975792911685051217
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FrogJump_3
+      name: ShieldOn_3
       rect:
         serializedVersion: 2
-        x: 432
-        y: 18
-        width: 144
-        height: 174
+        x: 1212
+        y: 0
+        width: 202
+        height: 172
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,20 +210,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1385fe96ed4e0420800000000000000
-      internalID: 2598099687944061726
+      spriteID: 2c6a73703dc1a0620800000000000000
+      internalID: 2741035015893132994
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FrogJump_4
+      name: ShieldOn_4
       rect:
         serializedVersion: 2
-        x: 576
-        y: 18
-        width: 144
-        height: 174
+        x: 1414
+        y: 0
+        width: 202
+        height: 172
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,20 +231,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b9be558afba26890800000000000000
-      internalID: -7466216139759109706
+      spriteID: 29bb93d644f4097e0800000000000000
+      internalID: -1760820298992993390
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FrogJump_5
+      name: ShieldOn_5
       rect:
         serializedVersion: 2
-        x: 720
-        y: 18
-        width: 144
-        height: 174
+        x: 1616
+        y: 0
+        width: 202
+        height: 172
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,20 +252,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5bdeb362a8f3a6350800000000000000
-      internalID: 6010686515258846645
+      spriteID: 0879b86c8118a4670800000000000000
+      internalID: 8523767188162320256
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FrogJump_6
+      name: ShieldOn_6
       rect:
         serializedVersion: 2
-        x: 864
-        y: 18
-        width: 144
-        height: 174
+        x: 1818
+        y: 0
+        width: 202
+        height: 172
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,20 +273,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f49f7af4c9f320b0800000000000000
-      internalID: -5754481274437790474
+      spriteID: d6a7d9aa63d3fed80800000000000000
+      internalID: -8219283489927890323
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FrogJump_7
+      name: ShieldOn_7
       rect:
         serializedVersion: 2
-        x: 1008
-        y: 18
-        width: 144
-        height: 174
+        x: 2020
+        y: 0
+        width: 202
+        height: 172
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -300,20 +294,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ca93dae61fb192f0800000000000000
-      internalID: -967782339758023999
+      spriteID: 5ad6ba6ee37b08cb0800000000000000
+      internalID: -4863686116774285915
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FrogJump_8
+      name: ShieldOn_8
       rect:
         serializedVersion: 2
-        x: 1152
-        y: 18
-        width: 144
-        height: 174
+        x: 2222
+        y: 0
+        width: 202
+        height: 172
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -321,20 +315,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdb39b69598ec95d0800000000000000
-      internalID: -3054310718087545893
+      spriteID: c0bcbc905d11ee8e0800000000000000
+      internalID: -1662371605763077364
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FrogJump_9
+      name: ShieldOn_9
       rect:
         serializedVersion: 2
-        x: 1296
-        y: 18
-        width: 144
-        height: 174
+        x: 2424
+        y: 0
+        width: 202
+        height: 172
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -342,50 +336,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3620f5c077cefbaf0800000000000000
-      internalID: -378323847623015837
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FrogJump_10
-      rect:
-        serializedVersion: 2
-        x: 1440
-        y: 18
-        width: 144
-        height: 174
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1a34ea4d408db1aa0800000000000000
-      internalID: -6189115747630955615
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FrogJump_11
-      rect:
-        serializedVersion: 2
-        x: 1584
-        y: 18
-        width: 144
-        height: 174
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7b9993f1b3e4d8040800000000000000
-      internalID: 4651460005977495991
+      spriteID: 1a141fb9716222290800000000000000
+      internalID: -7916723312121527903
       vertices: []
       indices: 
       edges: []
