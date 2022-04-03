@@ -20,7 +20,8 @@ public class DetectNote : MonoBehaviour
     {
         if (Input.GetKeyDown(triggerKey)){
             if(noteActive == true){
-				Debug.Log("SHREDDING");
+				//Debug.Log("SHREDDING");
+				AttackLogic.launchAttack(currentNote.name);
 				Destroy(currentNote);
 				GameManager.notesHit++;
 				GameManager.currentCombo++;
@@ -30,7 +31,7 @@ public class DetectNote : MonoBehaviour
 	
 	public void checkHit(){
 		if(noteActive == true){
-			Debug.Log("SHREDDING");
+			//Debug.Log("SHRED NATION");
 			Destroy(currentNote);
 			GameManager.notesHit++;
 			GameManager.currentCombo++;
@@ -40,6 +41,7 @@ public class DetectNote : MonoBehaviour
 	void OnTriggerEnter2D(Collider2D other) {
 		noteActive = true;
 		currentNote = other.gameObject;
+		AttackLogic.launchAttack(currentNote.name);
 	}
 	
 	void OnTriggerExit2D(Collider2D other) {

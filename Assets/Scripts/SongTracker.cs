@@ -67,7 +67,7 @@ public class SongTracker : MonoBehaviour
 		currentSong = (Song)Resources.Load("Songs/Hard/Track " + songNumber);
 		currentAudio = (AudioClip)Resources.Load("Songs/Audio/Track " + songNumber);
 		audioPlayer.PlayOneShot(currentAudio);
-		Debug.Log("Searching in Songs/Hard/Track " + songNumber);
+		//Debug.Log("Searching in Songs/Hard/Track " + songNumber);
 		songSpeed = currentSong.trackSpeed;
 		spawnNotes(currentSong);
 		noteReel.transform.position = reelStart;
