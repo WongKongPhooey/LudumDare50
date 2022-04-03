@@ -22,9 +22,20 @@ public class DetectNote : MonoBehaviour
             if(noteActive == true){
 				Debug.Log("SHREDDING");
 				Destroy(currentNote);
+				GameManager.notesHit++;
+				GameManager.currentCombo++;
 			}
         }
     }
+	
+	public void checkHit(){
+		if(noteActive == true){
+			Debug.Log("SHREDDING");
+			Destroy(currentNote);
+			GameManager.notesHit++;
+			GameManager.currentCombo++;
+		}
+	}
 	
 	void OnTriggerEnter2D(Collider2D other) {
 		noteActive = true;
@@ -34,6 +45,7 @@ public class DetectNote : MonoBehaviour
 	void OnTriggerExit2D(Collider2D other) {
 		noteActive = false;
 		currentNote = null;
+		GameManager.totalNotes++;
 	}
 	
 	bool isActive(){
