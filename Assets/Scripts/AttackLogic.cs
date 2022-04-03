@@ -16,7 +16,7 @@ public class AttackLogic : MonoBehaviour
         
     }
 	
-	void launchAttack(string attackName){
+	public static void launchAttack(string attackName){
 		switch(attackName){
 			case "Skull":
 				break;

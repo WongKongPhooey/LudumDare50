@@ -14,9 +14,14 @@ public class SongTracker : MonoBehaviour
 	public Transform noteTrack;
 	public Song currentSong;
 	
+	public AudioClip currentAudio;
+	AudioSource audioPlayer;
+	
     void Start(){
 		//Buys some time before the track plays
         songSpeed = 120;
+		
+		audioPlayer = GetComponent<AudioSource>();
 		
 		reelStart = noteReel.transform.position;
 		
@@ -25,6 +30,8 @@ public class SongTracker : MonoBehaviour
 		if(currentSong != null){
 			songNumber = currentSong.trackNumber;
 			songSpeed = currentSong.trackSpeed;
+			currentAudio = (AudioClip)Resources.Load("Songs/Audio/Track " + songNumber);
+			audioPlayer.PlayOneShot(currentAudio);
 			spawnNotes(currentSong);
 		} else {
 			Debug.Log("No song loaded");
@@ -40,10 +47,16 @@ public class SongTracker : MonoBehaviour
 		int noteIndex = 0;
 		List<int> notes = currentSong.notes;
 		List<int> keys = currentSong.keys;
+		List<string> attackNotes = currentSong.attacks;
 		
 		foreach(int note in notes){
 			int key = keys[noteIndex];
 			GameObject noteInst = Instantiate(noteTile, new Vector3(-note * 60, -(key-1) * 75, transform.position.z) , Quaternion.identity);
+			if(attackNotes[noteIndex] != ""){
+				noteInst.name = "" + attackNotes[noteIndex] + "";
+			} else {
+				noteInst.name = "Note";
+			}
 			noteInst.transform.SetParent(noteTrack, false);
 			noteIndex++;
 		}
@@ -52,6 +65,8 @@ public class SongTracker : MonoBehaviour
 	public void nextTrack(){
 		songNumber++;
 		currentSong = (Song)Resources.Load("Songs/Hard/Track " + songNumber);
+		currentAudio = (AudioClip)Resources.Load("Songs/Audio/Track " + songNumber);
+		audioPlayer.PlayOneShot(currentAudio);
 		Debug.Log("Searching in Songs/Hard/Track " + songNumber);
 		songSpeed = currentSong.trackSpeed;
 		spawnNotes(currentSong);
