@@ -17,6 +17,16 @@ public class AttackLogic : MonoBehaviour
     }
 	
 	void launchAttack(string attackName){
-		
+		switch(attackName){
+			case "Skull":
+				break;
+			case "Laser":
+				break;
+			case "Wave":
+				break;
+			default:
+				break;
+		}
+		Debug.Log("FIRED " + attackName);
 	}
 }
