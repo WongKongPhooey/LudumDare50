@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
 
     // Start is called before the first frame update
     void Start(){
-       EndGame(); //Endgame needs to be triggered to ping up correct ui
+       //EndGame(); //Endgame needs to be triggered to ping up correct ui
     }
 
     // Update is called once per frame
