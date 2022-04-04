@@ -1378,7 +1378,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 16, y: 1033}
+  m_AnchoredPosition: {x: 16, y: 400}
   m_SizeDelta: {x: 500, y: 60}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &455764865
@@ -1428,11 +1428,11 @@ MonoBehaviour:
       - m_Target: {fileID: 2119365199}
         m_TargetAssemblyTypeName: SongTracker, Assembly-CSharp
         m_MethodName: nextTrack
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6173,6 +6173,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 307273741, guid: ae4081ef385822e419033ac13c874976, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 913922759, guid: ae4081ef385822e419033ac13c874976, type: 3}
       propertyPath: m_CollisionDetection
       value: 1
@@ -6180,6 +6184,14 @@ PrefabInstance:
     - target: {fileID: 913922760, guid: ae4081ef385822e419033ac13c874976, type: 3}
       propertyPath: m_JumpForce
       value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 1748231779, guid: ae4081ef385822e419033ac13c874976, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028081162, guid: ae4081ef385822e419033ac13c874976, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7625933265972117382, guid: ae4081ef385822e419033ac13c874976, type: 3}
       propertyPath: m_RootOrder
@@ -7907,6 +7919,7 @@ MonoBehaviour:
   comboUI: {fileID: 1501201830}
   healthUI: {fileID: 88911014}
   shield: {fileID: 821241418}
+  playerCharacter: {fileID: 0}
   gameOverUI: {fileID: 4786643317320542689, guid: 3cf5381840bccbf49a4f08d002335be7, type: 3}
   winUI: {fileID: 3842867897247515803, guid: c94a24dcfde58624d9050d7d8811ab4f, type: 3}
   BossDead: 0
@@ -7994,7 +8007,7 @@ Transform:
   m_Children:
   - {fileID: 1830047928}
   m_Father: {fileID: 913578878}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2147470086
 GameObject:
