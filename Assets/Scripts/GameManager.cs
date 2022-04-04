@@ -43,12 +43,16 @@ public class GameManager : MonoBehaviour
  
     // Start is called before the first frame update
     void Start(){
+
        trackNotesHit = 0;
 	   trackTotalNotes = 0;
 	   trackAccuracy = 0;
 	   trackCurrentCombo = 0;
        firstTime = true;
        bossDead = false;
+
+        health = 50;
+
     }
 
     // Update is called once per frame
@@ -85,11 +89,11 @@ public class GameManager : MonoBehaviour
 	   if(bossDead == true && firstTime == true)
         {
 		   Destroy(playerCharacter.GetComponent<CharacterController2D>());
-            Destroy(playerCharacter.GetComponent<PlayerMovement>()); // stop player moving
-            playerCharacter.GetComponent<PlayerMovement>().dead = true;
-            playerCharacter.GetComponent<Animator>().SetBool("IsDead", true);
+          //  Destroy(playerCharacter.GetComponent<PlayerMovement>()); // stop player moving
+           // playerCharacter.GetComponent<PlayerMovement>().dead = true;
+          //  playerCharacter.GetComponent<Animator>().SetBool("IsDead", true);
             Destroy(playerCharacter.transform.GetChild(0).gameObject); // destroy particles
-            Debug.Log("DEAD");
+           // Debug.Log("DEAD");
             firstTime = false;
 			
 			StartCoroutine(EndGame());
@@ -98,7 +102,7 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator EndGame()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2.5f);
 
         Time.timeScale = 0f;
         if(health <= 0)
@@ -109,8 +113,8 @@ public class GameManager : MonoBehaviour
         {
             Instantiate(winUI, transform.position, transform.rotation);
             Text finalScore = winUI.transform.Find("ScoreText").GetComponent<Text>();
-
-            finalScore.text = "" + notesHit;
+            Debug.Log(finalScore.text);
+            finalScore.text = "ello" + notesHit;
         }
         yield return null;
 
