@@ -18,6 +18,7 @@ public class DetectFail : MonoBehaviour
 	
 	void OnTriggerEnter2D(Collider2D other) {
 		GameManager.currentCombo = 0;
+		GameManager.shieldOn = false;
 		Destroy(other.gameObject);
 	}
 }

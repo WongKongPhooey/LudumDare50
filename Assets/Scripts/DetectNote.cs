@@ -25,6 +25,7 @@ public class DetectNote : MonoBehaviour
 				Destroy(currentNote);
 				GameManager.notesHit++;
 				GameManager.currentCombo++;
+				GameManager.shieldOn = true;
 			}
         }
     }
@@ -35,6 +36,7 @@ public class DetectNote : MonoBehaviour
 			Destroy(currentNote);
 			GameManager.notesHit++;
 			GameManager.currentCombo++;
+			GameManager.shieldOn = true;
 		}
 	}
 	

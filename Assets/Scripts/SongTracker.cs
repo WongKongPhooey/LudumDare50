@@ -19,7 +19,9 @@ public class SongTracker : MonoBehaviour
 	
     void Start(){
 		//Buys some time before the track plays
-        songSpeed = 120;
+        GameManager.health = 100;
+		
+		songSpeed = 120;
 		
 		audioPlayer = GetComponent<AudioSource>();
 		

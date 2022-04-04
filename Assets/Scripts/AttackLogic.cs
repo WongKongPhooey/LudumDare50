@@ -6,15 +6,22 @@ public class AttackLogic : MonoBehaviour
 {
 	
 	public Transform stoatPos;
+	public Transform player;
+	
 	public GameObject skull;
+	public GameObject laser;
 	public static Transform stoatPosSt;
+	public static Transform playerSt;
 	public static GameObject skullSt;
+	public static GameObject laserSt;
 	
     // Start is called before the first frame update
     void Start()
     {
+		playerSt = player;
 		skullSt = skull;
 		stoatPosSt = stoatPos;
+		laserSt = laser;
     }
 
     // Update is called once per frame
@@ -30,7 +37,8 @@ public class AttackLogic : MonoBehaviour
 				Debug.Log("Launch Skull");
 				break;
 			case "Laser":
-				//fireLaser();
+				laserSt.SetActive(true);
+				laserSt.transform.position = new Vector3(playerSt.position.x,4.7f,0f);
 				Debug.Log("Launch Laser");
 				break;
 			case "Wave":
