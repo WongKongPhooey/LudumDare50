@@ -18,7 +18,7 @@ public class SkullMove : MonoBehaviour
     [SerializeField]
     float magnitude = 0.5f;
 
-    bool facingRight = true;
+   // bool facingRight = true;
 
     Vector3 pos, localScale;
 
