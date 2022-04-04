@@ -26,7 +26,7 @@ public class SongTracker : MonoBehaviour
     void Start(){
 		
 		//Buys some time before the track plays
-        GameManager.health = 100;
+        GameManager.health = 50;
 		
 		songSpeed = 0;
 		

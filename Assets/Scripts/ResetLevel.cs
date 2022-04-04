@@ -12,7 +12,7 @@ public class ResetLevel : MonoBehaviour
     {
         Debug.Log("Restarting");
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
 
     }
 

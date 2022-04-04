@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
 
-	
 	public GameObject scoreUI;
 	public GameObject comboUI;
 
@@ -37,15 +36,19 @@ public class GameManager : MonoBehaviour
     public GameObject winUI;
     public static bool bossDead = false;
 
-    bool firstTime = true; // used to stop every update deletion attempts
+    public bool firstTime; // used to stop every update deletion attempts
 
+
+
+ 
     // Start is called before the first frame update
     void Start(){
        trackNotesHit = 0;
 	   trackTotalNotes = 0;
 	   trackAccuracy = 0;
 	   trackCurrentCombo = 0;
-	   
+       firstTime = true;
+       bossDead = false;
     }
 
     // Update is called once per frame
@@ -79,7 +82,8 @@ public class GameManager : MonoBehaviour
             StartCoroutine(EndGame()); // Win/Lose state
 	   }
 	   
-	   if(bossDead == true){
+	   if(bossDead == true && firstTime == true)
+        {
 		   Destroy(playerCharacter.GetComponent<CharacterController2D>());
             Destroy(playerCharacter.GetComponent<PlayerMovement>()); // stop player moving
             playerCharacter.GetComponent<PlayerMovement>().dead = true;
@@ -104,6 +108,9 @@ public class GameManager : MonoBehaviour
         else
         {
             Instantiate(winUI, transform.position, transform.rotation);
+            Text finalScore = winUI.transform.Find("ScoreText").GetComponent<Text>();
+
+            finalScore.text = "" + notesHit;
         }
         yield return null;
 
