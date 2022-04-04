@@ -54,10 +54,9 @@ public class MenuButton : MonoBehaviour
 
     IEnumerator StartingScene()
     {
-        if(SceneName == "CTBossFight")
-        {
+        
             yield return new WaitForSeconds(1.6f);
-        }
+        
         //SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
        // SceneManager.GetActiveScene.
         //SceneManager.UnloadSceneAsync("StartMenu");
