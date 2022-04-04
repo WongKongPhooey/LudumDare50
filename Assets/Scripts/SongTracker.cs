@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SongTracker : MonoBehaviour
 {
-	int songNumber;
+	static int songNumber;
 	static string songName;
 	int songSpeed;
 	float songPoint;
@@ -23,7 +23,7 @@ public class SongTracker : MonoBehaviour
 		//Buys some time before the track plays
         GameManager.health = 100;
 		
-		songSpeed = 120;
+		songSpeed = 0;
 		
 		audioPlayer = GetComponent<AudioSource>();
 		audioPlayerSt = audioPlayer;
@@ -35,8 +35,8 @@ public class SongTracker : MonoBehaviour
 		if(currentSong != null){
 			songNumber = currentSong.trackNumber;
 			songSpeed = currentSong.trackSpeed;
-			currentAudio = (AudioClip)Resources.Load("Songs/Audio/Track " + songNumber);
-			audioPlayer.PlayOneShot(currentAudio);
+			//currentAudio = (AudioClip)Resources.Load("Songs/Audio/Track " + songNumber);
+			//audioPlayer.PlayOneShot(currentAudio);
 			spawnNotes(currentSong);
 		} else {
 			Debug.Log("No song loaded");
@@ -67,8 +67,12 @@ public class SongTracker : MonoBehaviour
 		}
 	}
 	
-	public void nextTrack(){
-		songNumber++;
+	public void nextTrack(int specificSong = 0){
+		if(specificSong != 0){
+			songNumber = specificSong;
+		} else {
+			songNumber++;
+		}
 		currentSong = (Song)Resources.Load("Songs/Hard/Track " + songNumber);
 		//currentAudio = (AudioClip)Resources.Load("Songs/Audio/Track " + songNumber);
 		//audioPlayer.PlayOneShot(currentAudio);
@@ -83,8 +87,15 @@ public class SongTracker : MonoBehaviour
 		GameManager.trackCurrentCombo = 0;
 	}
 	
-	public static void playTrack(){
-		AudioClip newAudio = (AudioClip)Resources.Load("Songs/Audio/Track " + currentSong);
+	public static void playTrack(int trackNumber = 999){
+		if(trackNumber != 999){
+			songNumber = trackNumber;
+		}
+		AudioClip newAudio = (AudioClip)Resources.Load("Songs/Audio/Track " + songNumber);
+		Debug.Log("Load audio track: " + newAudio);
+		
+		audioPlayerSt = GameObject.Find("Main Camera").GetComponent<AudioSource>();
+		
 		audioPlayerSt.PlayOneShot(newAudio);
 	}
 }

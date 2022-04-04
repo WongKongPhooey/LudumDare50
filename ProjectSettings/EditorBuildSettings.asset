@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/StartMenu.unity
+    guid: a2cedc96b2e1349449ee210a8fefb98a
+  - enabled: 1
+    path: Assets/Scenes/CTBossFight.unity
+    guid: dac20ec803d375a4a91f8e82efb3aa42
   m_configObjects: {}

@@ -48,6 +48,7 @@ public class DetectNote : MonoBehaviour
 		if(GameManager.trackTotalNotes == 0){
 			//Play track
 			SongTracker.playTrack();
+			Debug.Log("START TRACK");
 		}
 		
 		noteActive = true;

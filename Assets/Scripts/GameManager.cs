@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
 	
 	public GameObject scoreUI;
+	public GameObject comboUI;
 	public GameObject healthUI;
 	public GameObject shield;
 	
@@ -36,7 +37,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update(){
        Text scoreText = scoreUI.GetComponent<Text>();
-	   scoreText.text = "Score: " + notesHit + " Combo: " + currentCombo;
+	   scoreText.text = "Score: " + notesHit;
+	   
+	    Text comboText = comboUI.GetComponent<Text>();
+	   comboText.text = "x" + currentCombo + "";
 	   
 	   Text healthText = healthUI.GetComponent<Text>();
 	   healthText.text = "Health: " + health;
