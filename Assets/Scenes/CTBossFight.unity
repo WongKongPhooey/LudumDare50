@@ -7722,7 +7722,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ff71727d11b6843498a34b6d55f6d39b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -7840,6 +7840,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd76e9b004279de4185a080ec0f7995f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingSong: 2
   noteTileH: {fileID: 6312293970574638490, guid: 58e38a7af9b51ba428f14a2f6cb4b91a, type: 3}
   noteTileJ: {fileID: 6312293970574638490, guid: 26db1da7ed49034408519ed1b08e05bb, type: 3}
   noteTileK: {fileID: 6312293970574638490, guid: a88a1565a3959df41a117f0e766ba081, type: 3}
@@ -7848,7 +7849,7 @@ MonoBehaviour:
   reelStart: {x: 0, y: 0, z: 0}
   noteTrack: {fileID: 2085954491}
   currentSong: {fileID: 0}
-  currentAudio: {fileID: 8300000, guid: 3c8b3d4bcfe10f34592df824ae932870, type: 3}
+  currentAudio: {fileID: 8300000, guid: ff71727d11b6843498a34b6d55f6d39b, type: 3}
 --- !u!81 &2119365200
 AudioListener:
   m_ObjectHideFlags: 0

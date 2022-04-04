@@ -60,7 +60,8 @@ public class MenuButton : MonoBehaviour
         }
         //SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
        // SceneManager.GetActiveScene.
-        SceneManager.UnloadSceneAsync(1);
+        //SceneManager.UnloadSceneAsync("StartMenu");
+		SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
         SceneManager.LoadScene(SceneName, LoadSceneMode.Single);
     }
 }

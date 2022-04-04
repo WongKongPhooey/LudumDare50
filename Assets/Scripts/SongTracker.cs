@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class SongTracker : MonoBehaviour
 {
+	public int startingSong;
 	static int songNumber;
 	static string songName;
 	int songSpeed;
+	int songLength;
 	float songPoint;
 	public GameObject noteTileH;
 	public GameObject noteTileJ;
@@ -15,7 +17,7 @@ public class SongTracker : MonoBehaviour
 	public GameObject noteReel;
 	public Vector3 reelStart;
 	public Transform noteTrack;
-	public  Song currentSong;
+	public Song currentSong;
 	
 	public AudioClip currentAudio;
 	public static AudioSource audioPlayerSt;
@@ -33,11 +35,12 @@ public class SongTracker : MonoBehaviour
 		
 		reelStart = noteReel.transform.position;
 		
-		currentSong = (Song)Resources.Load("Songs/Hard/Track 1");
+		currentSong = (Song)Resources.Load("Songs/Hard/Track " + startingSong);
 		
 		if(currentSong != null){
 			songNumber = currentSong.trackNumber;
 			songSpeed = currentSong.trackSpeed;
+			songLength = currentSong.trackLength;
 			//currentAudio = (AudioClip)Resources.Load("Songs/Audio/Track " + songNumber);
 			//audioPlayer.PlayOneShot(currentAudio);
 			spawnNotes(currentSong);
@@ -49,6 +52,19 @@ public class SongTracker : MonoBehaviour
     // Update is called once per frame
     void Update(){
 		noteReel.transform.position -= new Vector3(-songSpeed * Time.deltaTime,0f,0f);
+		
+		if(GameManager.trackTotalNotes > songLength){
+			//Reached end of song..
+			noteReel.transform.position = reelStart;
+			spawnNotes(currentSong);
+			audioPlayer.Stop();
+			GameManager.trackNotesHit = 0;
+			GameManager.trackTotalNotes = 0;
+			GameManager.trackAccuracy = 0;
+			GameManager.trackCurrentCombo = 0;
+		} else {
+			//Debug.Log("Reel X: " + noteReel.transform.position.x + " not yet past " + ((songLength * 60) + 700));
+		}
     }
 	
 	void spawnNotes(Song currentSong){
