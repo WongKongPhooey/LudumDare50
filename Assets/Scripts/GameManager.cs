@@ -111,10 +111,10 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Instantiate(winUI, transform.position, transform.rotation);
-            Text finalScore = winUI.transform.Find("ScoreText").GetComponent<Text>();
+            GameObject winInst = Instantiate(winUI, transform.position, transform.rotation);
+            Text finalScore = GameObject.Find("WinScoreText").GetComponent<Text>();
             Debug.Log(finalScore.text);
-            finalScore.text = "ello" + notesHit;
+            finalScore.text = "Score: " + notesHit + "/" + totalNotes;
         }
         yield return null;
 
