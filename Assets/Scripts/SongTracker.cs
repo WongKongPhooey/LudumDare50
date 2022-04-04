@@ -55,6 +55,10 @@ public class SongTracker : MonoBehaviour
 		
 		if(GameManager.trackTotalNotes > songLength){
 			//Reached end of song..
+			if(songNumber == 2){
+				//TEK ME TU DA WIN STATE PLZ
+				GameManager.bossDead = true;
+			}
 			noteReel.transform.position = reelStart;
 			spawnNotes(currentSong);
 			audioPlayer.Stop();

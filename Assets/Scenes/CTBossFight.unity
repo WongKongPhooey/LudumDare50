@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7722,7 +7722,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ff71727d11b6843498a34b6d55f6d39b, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -7827,7 +7827,6 @@ MonoBehaviour:
   playerCharacter: {fileID: 1021902532}
   gameOverUI: {fileID: 4786643317320542689, guid: 3cf5381840bccbf49a4f08d002335be7, type: 3}
   winUI: {fileID: 3842867897247515803, guid: c94a24dcfde58624d9050d7d8811ab4f, type: 3}
-  BossDead: 0
 --- !u!114 &2119365199
 MonoBehaviour:
   m_ObjectHideFlags: 0

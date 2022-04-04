@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject gameOverUI;
     public GameObject winUI;
-    public bool BossDead = false;
+    public static bool bossDead = false;
 
     bool firstTime = true; // used to stop every update deletion attempts
 
@@ -73,6 +73,18 @@ public class GameManager : MonoBehaviour
             firstTime = false;
 
             StartCoroutine(EndGame()); // Win/Lose state
+	   }
+	   
+	   if(bossDead == true){
+		   Destroy(playerCharacter.GetComponent<CharacterController2D>());
+            Destroy(playerCharacter.GetComponent<PlayerMovement>()); // stop player moving
+            playerCharacter.GetComponent<PlayerMovement>().dead = true;
+            playerCharacter.GetComponent<Animator>().SetBool("IsDead", true);
+            Destroy(playerCharacter.transform.GetChild(0).gameObject); // destroy particles
+            Debug.Log("DEAD");
+            firstTime = false;
+			
+			StartCoroutine(EndGame());
 	   }
     }
 
