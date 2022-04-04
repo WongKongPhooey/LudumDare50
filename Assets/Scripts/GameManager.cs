@@ -6,9 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+
 	
 	public GameObject scoreUI;
 	public GameObject comboUI;
+
 	public GameObject healthUI;
 	public GameObject shield;
 	
@@ -16,18 +18,26 @@ public class GameManager : MonoBehaviour
 	public static int totalNotes;
 	public static float accuracy;
 	public static int currentCombo;
+
 	
 	public static int trackNotesHit;
 	public static int trackTotalNotes;
 	public static float trackAccuracy;
 	public static int trackCurrentCombo;
 	
+
+
+    public GameObject playerCharacter;
+
+
 	public static int health;
 	public static bool shieldOn;
 
     public GameObject gameOverUI;
     public GameObject winUI;
     public bool BossDead = false;
+
+    bool firstTime = true; // used to stop every update deletion attempts
 
     // Start is called before the first frame update
     void Start(){
@@ -51,15 +61,24 @@ public class GameManager : MonoBehaviour
 		   shield.SetActive(false);
 	   }
 	   
-	   if(health <= 0){
+	   if(health <= 0 && firstTime == true){
 		   health = 0;
-		   Debug.Log("DEAD");
-           EndGame(); // Win/Lose state
+            Destroy(playerCharacter.GetComponent<CharacterController2D>());
+            Destroy(playerCharacter.GetComponent<PlayerMovement>()); // stop player moving
+            playerCharacter.GetComponent<PlayerMovement>().dead = true;
+            playerCharacter.GetComponent<Animator>().SetBool("IsDead", true);
+            Destroy(playerCharacter.transform.GetChild(0).gameObject); // destroy particles
+            Debug.Log("DEAD");
+            firstTime = false;
+
+            StartCoroutine(EndGame()); // Win/Lose state
 	   }
     }
 
-    void EndGame()
+    public IEnumerator EndGame()
     {
+        yield return new WaitForSeconds(1);
+
         Time.timeScale = 0f;
         if( BossDead == false)
         {
@@ -69,9 +88,9 @@ public class GameManager : MonoBehaviour
         {
             Instantiate(winUI, transform.position, transform.rotation);
         }
-        
+        yield return null;
 
     }
-
     
+
 }

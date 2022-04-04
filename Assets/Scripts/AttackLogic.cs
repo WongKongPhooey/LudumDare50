@@ -41,8 +41,9 @@ public class AttackLogic : MonoBehaviour
 				Debug.Log("Launch Skull");
 				break;
 			case "Laser":
-				laserSt.SetActive(true);
-				laserSt.transform.position = new Vector3(playerSt.position.x,4.7f,0f);
+                Instantiate(laserSt, new Vector3(playerSt.position.x, 4.7f, 0f), Quaternion.identity);
+                //laserSt.SetActive(true);
+				//laserSt.transform.position = new Vector3(playerSt.position.x,4.7f,0f);
 				Debug.Log("Launch Laser");
 				break;
 			case "Wave":
