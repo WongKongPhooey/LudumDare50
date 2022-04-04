@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
 	   if(health <= 0){
 		   health = 0;
 		   Debug.Log("DEAD");
-		   // Win/Lose state
+           EndGame(); // Win/Lose state
 	   }
     }
 

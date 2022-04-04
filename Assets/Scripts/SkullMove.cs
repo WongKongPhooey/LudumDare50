@@ -5,6 +5,7 @@ using UnityEngine;
 public class SkullMove : MonoBehaviour
 {
 	public GameObject player;
+
     // Start is called before the first frame update
     void Start(){
         player = GameObject.Find("CharacterSprite");
@@ -12,7 +13,7 @@ public class SkullMove : MonoBehaviour
 
     // Update is called once per frame
     void Update(){
-		transform.position = Vector3.MoveTowards(transform.position, new Vector3(player.transform.position.x, 0.7f,0), 0.2f);
+        transform.position = Vector3.MoveTowards(transform.position, new Vector3(player.transform.position.x, 0.7f,0),0.02f);
     }
 	
 	void OnTriggerEnter2D(Collider2D other) {

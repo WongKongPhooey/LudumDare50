@@ -9,18 +9,21 @@ public class AttackLogic : MonoBehaviour
 	public Transform player;
 	
 	public GameObject skull;
-	public GameObject laser;
+    public GameObject spawnMarker;
+    public GameObject laser;
 	public static Transform stoatPosSt;
 	public static Transform playerSt;
 	public static GameObject skullSt;
-	public static GameObject laserSt;
+    public static GameObject spawnMarkerSt;
+    public static GameObject laserSt;
 	
     // Start is called before the first frame update
     void Start()
     {
 		playerSt = player;
 		skullSt = skull;
-		stoatPosSt = stoatPos;
+        spawnMarkerSt = spawnMarker;
+        stoatPosSt = stoatPos;
 		laserSt = laser;
     }
 
@@ -33,7 +36,8 @@ public class AttackLogic : MonoBehaviour
 	public static void launchAttack(string attackName){
 		switch(attackName){
 			case "Skull":
-				Instantiate(skullSt, stoatPosSt.position , Quaternion.identity);
+                Instantiate(spawnMarkerSt, stoatPosSt.position, Quaternion.identity);
+                Instantiate(skullSt, stoatPosSt.position , Quaternion.identity);
 				Debug.Log("Launch Skull");
 				break;
 			case "Laser":
