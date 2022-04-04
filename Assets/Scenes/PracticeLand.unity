@@ -1950,7 +1950,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -10, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1961,7 +1961,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 40, y: 40}
   m_EdgeRadius: 0
 --- !u!50 &571699150
 Rigidbody2D:
@@ -3268,7 +3268,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -10, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3279,7 +3279,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 40, y: 40}
   m_EdgeRadius: 0
 --- !u!50 &820264512
 Rigidbody2D:
@@ -5065,7 +5065,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -10, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5076,7 +5076,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 40, y: 40}
   m_EdgeRadius: 0
 --- !u!50 &1155199528
 Rigidbody2D:
@@ -5804,6 +5804,7 @@ MonoBehaviour:
   noteReel: {fileID: 636189387}
   reelStart: {x: 0, y: 0, z: 0}
   noteTrack: {fileID: 636189388}
+  currentSong: {fileID: 0}
   currentAudio: {fileID: 8300000, guid: aca8f3cceca588940bf9a99a7099c3e7, type: 3}
 --- !u!82 &1309829321
 AudioSource:
@@ -7594,7 +7595,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -10, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -7605,7 +7606,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 40, y: 40}
   m_EdgeRadius: 0
 --- !u!50 &1733093162
 Rigidbody2D:
@@ -8370,6 +8371,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stoatPos: {fileID: 0}
   player: {fileID: 0}
+  spawn1: {fileID: 0}
+  spawn2: {fileID: 0}
   enableAttacks: 0
   skull: {fileID: 0}
   spawnMarker: {fileID: 0}
