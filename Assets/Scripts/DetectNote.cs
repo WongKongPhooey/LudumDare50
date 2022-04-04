@@ -23,9 +23,12 @@ public class DetectNote : MonoBehaviour
 				//Debug.Log("SHREDDING");
 				AttackLogic.launchAttack(currentNote.name);
 				Destroy(currentNote);
+				GameManager.trackNotesHit++;
+				GameManager.trackCurrentCombo++;
+				GameManager.shieldOn = true;
+				
 				GameManager.notesHit++;
 				GameManager.currentCombo++;
-				GameManager.shieldOn = true;
 			}
         }
     }
@@ -41,15 +44,22 @@ public class DetectNote : MonoBehaviour
 	}
 	
 	void OnTriggerEnter2D(Collider2D other) {
+		
+		if(GameManager.trackTotalNotes == 0){
+			//Play track
+			SongTracker.playTrack();
+		}
+		
 		noteActive = true;
 		currentNote = other.gameObject;
 		AttackLogic.launchAttack(currentNote.name);
+		GameManager.trackTotalNotes++;
+		GameManager.totalNotes++;
 	}
 	
 	void OnTriggerExit2D(Collider2D other) {
 		noteActive = false;
 		currentNote = null;
-		GameManager.totalNotes++;
 	}
 	
 	bool isActive(){

@@ -239,7 +239,7 @@ Transform:
   - {fileID: 1727398855}
   - {fileID: 1937628168}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &194671670
 GameObject:
@@ -807,7 +807,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &688962771
 GameObject:
@@ -1738,7 +1738,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1160653167
 MonoBehaviour:
@@ -1975,7 +1975,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1297295541
 GameObject:
@@ -2230,7 +2230,7 @@ Transform:
   - {fileID: 551656556}
   - {fileID: 688962772}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1339055478
 GameObject:
@@ -2591,13 +2591,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1392411002}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.7, y: 0.31, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1949181932}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_Father: {fileID: 913922758}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1392411006
 MonoBehaviour:
@@ -2615,7 +2615,6 @@ MonoBehaviour:
   noteReel: {fileID: 1414001881}
   reelStart: {x: 0, y: 0, z: 0}
   noteTrack: {fileID: 1414001882}
-  currentSong: {fileID: 11400000, guid: eb3d6752e27c01c4bb432c4c1f05d38b, type: 2}
   currentAudio: {fileID: 0}
 --- !u!114 &1392411007
 MonoBehaviour:
@@ -2632,6 +2631,9 @@ MonoBehaviour:
   scoreUI: {fileID: 1904288264}
   healthUI: {fileID: 1297295541}
   shield: {fileID: 307273740}
+  gameOverUI: {fileID: 0}
+  winUI: {fileID: 0}
+  BossDead: 0
 --- !u!82 &1392411008
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3819,6 +3821,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 307273741, guid: ae4081ef385822e419033ac13c874976, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1748231779, guid: ae4081ef385822e419033ac13c874976, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028081162, guid: ae4081ef385822e419033ac13c874976, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2211491863246577106, guid: ae4081ef385822e419033ac13c874976, type: 3}
       propertyPath: m_MaxParticleSize
       value: 0.5
@@ -3839,9 +3853,13 @@ PrefabInstance:
       propertyPath: InitialModule.startLifetime.scalar
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4174896083455163965, guid: ae4081ef385822e419033ac13c874976, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7625933265972117382, guid: ae4081ef385822e419033ac13c874976, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7625933265972117382, guid: ae4081ef385822e419033ac13c874976, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3986,7 +4004,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1852464650
 GameObject:
@@ -4888,7 +4906,7 @@ Transform:
   m_LocalScale: {x: 0.8, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2147470086
 GameObject:

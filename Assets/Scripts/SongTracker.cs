@@ -12,22 +12,25 @@ public class SongTracker : MonoBehaviour
 	public GameObject noteReel;
 	public Vector3 reelStart;
 	public Transform noteTrack;
-	public Song currentSong;
+	public static Song currentSong;
 	
 	public AudioClip currentAudio;
+	public static AudioSource audioPlayerSt;
 	AudioSource audioPlayer;
 	
     void Start(){
+		
 		//Buys some time before the track plays
         GameManager.health = 100;
 		
 		songSpeed = 120;
 		
 		audioPlayer = GetComponent<AudioSource>();
+		audioPlayerSt = audioPlayer;
 		
 		reelStart = noteReel.transform.position;
 		
-		//currentSong = (Song)Resources.Load("Songs/Easy/" + songName);
+		currentSong = (Song)Resources.Load("Songs/Hard/Track 1");
 		
 		if(currentSong != null){
 			songNumber = currentSong.trackNumber;
@@ -67,11 +70,21 @@ public class SongTracker : MonoBehaviour
 	public void nextTrack(){
 		songNumber++;
 		currentSong = (Song)Resources.Load("Songs/Hard/Track " + songNumber);
-		currentAudio = (AudioClip)Resources.Load("Songs/Audio/Track " + songNumber);
-		audioPlayer.PlayOneShot(currentAudio);
+		//currentAudio = (AudioClip)Resources.Load("Songs/Audio/Track " + songNumber);
+		//audioPlayer.PlayOneShot(currentAudio);
 		//Debug.Log("Searching in Songs/Hard/Track " + songNumber);
 		songSpeed = currentSong.trackSpeed;
 		spawnNotes(currentSong);
 		noteReel.transform.position = reelStart;
+		
+		GameManager.trackNotesHit = 0;
+		GameManager.trackTotalNotes = 0;
+		GameManager.trackAccuracy = 0;
+		GameManager.trackCurrentCombo = 0;
+	}
+	
+	public static void playTrack(){
+		AudioClip newAudio = (AudioClip)Resources.Load("Songs/Audio/Track " + currentSong);
+		audioPlayerSt.PlayOneShot(newAudio);
 	}
 }

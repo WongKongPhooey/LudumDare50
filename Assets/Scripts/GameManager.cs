@@ -16,6 +16,11 @@ public class GameManager : MonoBehaviour
 	public static float accuracy;
 	public static int currentCombo;
 	
+	public static int trackNotesHit;
+	public static int trackTotalNotes;
+	public static float trackAccuracy;
+	public static int trackCurrentCombo;
+	
 	public static int health;
 	public static bool shieldOn;
 
