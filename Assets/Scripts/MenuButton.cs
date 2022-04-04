@@ -58,7 +58,9 @@ public class MenuButton : MonoBehaviour
         {
             yield return new WaitForSeconds(1.6f);
         }
-        
+        //SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
+       // SceneManager.GetActiveScene.
+        SceneManager.UnloadSceneAsync(1);
         SceneManager.LoadScene(SceneName, LoadSceneMode.Single);
     }
 }

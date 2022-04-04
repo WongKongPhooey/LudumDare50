@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
 
     // Start is called before the first frame update
     void Start(){
-       //EndGame(); //Endgame needs to be triggered to ping up correct ui
+       
     }
 
     // Update is called once per frame
@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(1);
 
         Time.timeScale = 0f;
-        if( BossDead == false)
+        if(health <= 0)
         {
             Instantiate(gameOverUI, transform.position, transform.rotation);
         }

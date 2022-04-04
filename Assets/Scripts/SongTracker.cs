@@ -15,7 +15,7 @@ public class SongTracker : MonoBehaviour
 	public GameObject noteReel;
 	public Vector3 reelStart;
 	public Transform noteTrack;
-	public static Song currentSong;
+	public  Song currentSong;
 	
 	public AudioClip currentAudio;
 	public static AudioSource audioPlayerSt;
