@@ -8,7 +8,10 @@ public class SongTracker : MonoBehaviour
 	static string songName;
 	int songSpeed;
 	float songPoint;
-	public GameObject noteTile;
+	public GameObject noteTileH;
+	public GameObject noteTileJ;
+	public GameObject noteTileK;
+	public GameObject noteTileL;
 	public GameObject noteReel;
 	public Vector3 reelStart;
 	public Transform noteTrack;
@@ -56,7 +59,28 @@ public class SongTracker : MonoBehaviour
 		
 		foreach(int note in notes){
 			int key = keys[noteIndex];
-			GameObject noteInst = Instantiate(noteTile, new Vector3(-note * 60, -(key-1) * 75, transform.position.z) , Quaternion.identity);
+			GameObject noteInst;
+			switch(key){
+				case 1:
+					GameObject noteInstH = Instantiate(noteTileH, new Vector3(-note * 60, -(key-1) * 75, transform.position.z) , Quaternion.identity);
+					noteInst = noteInstH;
+					break;
+				case 2:
+					GameObject noteInstJ = Instantiate(noteTileJ, new Vector3(-note * 60, -(key-1) * 75, transform.position.z) , Quaternion.identity);
+					noteInst = noteInstJ;
+					break;
+				case 3:
+					GameObject noteInstK = Instantiate(noteTileK, new Vector3(-note * 60, -(key-1) * 75, transform.position.z) , Quaternion.identity);
+					noteInst = noteInstK;
+					break;
+				case 4:
+					GameObject noteInstL = Instantiate(noteTileL, new Vector3(-note * 60, -(key-1) * 75, transform.position.z) , Quaternion.identity);
+					noteInst = noteInstL;
+					break;
+				default:
+					noteInst = null;
+					break;
+			}
 			if(attackNotes[noteIndex] != ""){
 				noteInst.name = "" + attackNotes[noteIndex] + "";
 			} else {

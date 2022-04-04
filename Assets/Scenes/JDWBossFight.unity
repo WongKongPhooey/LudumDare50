@@ -7922,7 +7922,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd76e9b004279de4185a080ec0f7995f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteTile: {fileID: 6312293970574638490, guid: 58e38a7af9b51ba428f14a2f6cb4b91a, type: 3}
+  noteTileH: {fileID: 6312293970574638490, guid: 58e38a7af9b51ba428f14a2f6cb4b91a, type: 3}
+  noteTileJ: {fileID: 6312293970574638490, guid: 26db1da7ed49034408519ed1b08e05bb, type: 3}
+  noteTileK: {fileID: 6312293970574638490, guid: a88a1565a3959df41a117f0e766ba081, type: 3}
+  noteTileL: {fileID: 6312293970574638490, guid: 55f014438f11ad143b4ac0713926e3a9, type: 3}
   noteReel: {fileID: 2085954490}
   reelStart: {x: 0, y: 0, z: 0}
   noteTrack: {fileID: 2085954491}
