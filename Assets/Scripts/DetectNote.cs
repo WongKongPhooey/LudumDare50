@@ -16,7 +16,7 @@ public class DetectNote : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetKeyDown(triggerKey)){
             if(noteActive == true){

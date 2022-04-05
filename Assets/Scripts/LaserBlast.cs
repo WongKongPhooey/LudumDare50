@@ -14,7 +14,7 @@ public class LaserBlast : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (killTime == true && overlapping == true)
         {

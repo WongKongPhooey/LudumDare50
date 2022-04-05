@@ -23,11 +23,8 @@ public class GameManager : MonoBehaviour
 	public static int trackTotalNotes;
 	public static float trackAccuracy;
 	public static int trackCurrentCombo;
-	
-
 
     public GameObject playerCharacter;
-
 
 	public static int health;
 	public static bool shieldOn;
@@ -37,26 +34,25 @@ public class GameManager : MonoBehaviour
     public static bool bossDead = false;
 
     public bool firstTime; // used to stop every update deletion attempts
-
-
-
  
     // Start is called before the first frame update
     void Start(){
 
-       trackNotesHit = 0;
-	   trackTotalNotes = 0;
-	   trackAccuracy = 0;
-	   trackCurrentCombo = 0;
-       firstTime = true;
-       bossDead = false;
+		Application.targetFrameRate = 60;
+
+        trackNotesHit = 0;
+	    trackTotalNotes = 0;
+	    trackAccuracy = 0;
+	    trackCurrentCombo = 0;
+        firstTime = true;
+        bossDead = false;
 
         health = 50;
 
     }
 
     // Update is called once per frame
-    void Update(){
+    void FixedUpdate(){
        Text scoreText = scoreUI.GetComponent<Text>();
         //scoreText.text = "Score: " + notesHit;
         scoreText.text = "" + notesHit;

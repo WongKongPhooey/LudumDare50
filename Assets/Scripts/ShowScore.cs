@@ -13,7 +13,7 @@ public class ShowScore : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update(){
+    void FixedUpdate(){
        Text scoreText = scoreUI.GetComponent<Text>();
 	   scoreText.text = "Score: " + GameManager.totalNotes;
     }

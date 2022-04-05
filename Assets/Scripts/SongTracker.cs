@@ -50,7 +50,7 @@ public class SongTracker : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update(){
+    void FixedUpdate(){
 		noteReel.transform.position -= new Vector3(-songSpeed * Time.deltaTime,0f,0f);
 		
 		if(GameManager.trackTotalNotes > songLength){

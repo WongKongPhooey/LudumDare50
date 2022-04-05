@@ -35,7 +35,7 @@ public class SkullMove : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         // transform.position = Vector3.MoveTowards(transform.position, new Vector3(player.transform.position.x, 0.7f,0),0.02f);
        // transform.position = Vector3.MoveTowards(transform.position, new Vector3(playerX, 0.7f, 0), 0.02f);

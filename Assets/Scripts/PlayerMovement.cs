@@ -15,7 +15,11 @@ public class PlayerMovement : MonoBehaviour {
     public bool dead = false;
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
+
+		// Move our character
+		controller.Move(horizontalMove * Time.fixedDeltaTime,crouch, jump);
+		jump = false;
 
 		horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 		animator.SetFloat("WalkSpeed",Mathf.Abs(horizontalMove));
@@ -40,12 +44,5 @@ public class PlayerMovement : MonoBehaviour {
 	public void OnLanding()
 	{
 		animator.SetBool("IsJumping",false);
-	}
-	
-	void FixedUpdate ()
-	{
-		// Move our character
-		controller.Move(horizontalMove * Time.fixedDeltaTime,crouch, jump);
-		jump = false;
 	}
 }
